@@ -1,0 +1,62 @@
+###
+POST http://localhost:5005/blog/create
+Content-Type: application/json
+
+{ "title": "BlogModelTest",
+  "content": "Test Content", 
+  "author" :"test Mam" 
+  }
+ 
+###
+GET http://localhost:5005/blog/get?limit=1
+###
+GET http://localhost:5005/blog/get
+###
+GET http://localhost:5005/blog/getId/1
+### 
+PATCH http://localhost:5005/blog/patch/1
+Content-Type: application/json
+
+{  "title": "1",
+  "content": "1"}
+###
+DELETE http://localhost:5005/blog/delete/6
+###
+POST http://localhost:5005/blog/comment/post
+Content-Type: application/json
+
+{
+  "blogId": "2",
+  "content": "test Comment",
+  "author": "tester"
+}
+###
+GET http://localhost:5005/blog/comment/get/2
+
+###
+PATCH  http://localhost:5005/blog/comment/patch/1
+Content-Type: application/json
+
+{ "content" : "patch test Comment" }
+###
+DELETE http://localhost:5005/blog/comment/delete/9
+
+###
+POST http://localhost:5005/blog/recomment/post
+Content-Type: application/json
+
+{
+  "commentIdx": "7",
+  "content": "test Comment",
+  "author": "tester"
+}
+###
+GET http://localhost:5005/blog/recomment/get/7
+
+###
+PATCH  http://localhost:5005/blog/recomment/patch/1
+Content-Type: application/json
+
+{ "content" : "patch test Comment" }
+###
+DELETE http://localhost:5005/blog/recomment/delete/10
